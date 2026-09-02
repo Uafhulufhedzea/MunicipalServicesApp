@@ -21,13 +21,11 @@ namespace MunicipalServicesApp
 
         private void CenterControls()
         {
-            // Center title horizontally
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
             lblTitle.Top = 40;
 
-            // Center buttons in the middle of the form
             int centerX = (this.ClientSize.Width - btnReportIssues.Width) / 2;
-            int centerY = (this.ClientSize.Height - 180) / 2; // 180 = 3 buttons * 45 + spacing
+            int centerY = (this.ClientSize.Height - 180) / 2;
 
             btnReportIssues.Left = centerX;
             btnReportIssues.Top = centerY;
