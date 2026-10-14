@@ -46,9 +46,9 @@
             // 
             // btnReportIssues
             // 
-            this.btnReportIssues.Location = new System.Drawing.Point(310, 150);
+            this.btnReportIssues.Location = new System.Drawing.Point(437, 182);
             this.btnReportIssues.Name = "btnReportIssues";
-            this.btnReportIssues.Size = new System.Drawing.Size(180, 45);
+            this.btnReportIssues.Size = new System.Drawing.Size(139, 37);
             this.btnReportIssues.TabIndex = 0;
             this.btnReportIssues.Text = "Report Issues";
             this.btnReportIssues.UseVisualStyleBackColor = true;
@@ -56,22 +56,22 @@
             // 
             // btnEvents
             // 
-            this.btnEvents.Enabled = false;
-            this.btnEvents.Location = new System.Drawing.Point(310, 210);
+            this.btnEvents.Location = new System.Drawing.Point(437, 252);
             this.btnEvents.Name = "btnEvents";
-            this.btnEvents.Size = new System.Drawing.Size(180, 45);
+            this.btnEvents.Size = new System.Drawing.Size(320, 42);
             this.btnEvents.TabIndex = 1;
-            this.btnEvents.Text = "Local Events and Announcements\r\n(Coming Soon)";
+            this.btnEvents.Text = "Local Events and Announcements";
             this.btnEvents.UseVisualStyleBackColor = true;
+            this.btnEvents.Click += new System.EventHandler(this.btnEvents_Click);
             // 
             // btnStatus
             // 
             this.btnStatus.Enabled = false;
-            this.btnStatus.Location = new System.Drawing.Point(310, 270);
+            this.btnStatus.Location = new System.Drawing.Point(501, 308);
             this.btnStatus.Name = "btnStatus";
-            this.btnStatus.Size = new System.Drawing.Size(180, 45);
+            this.btnStatus.Size = new System.Drawing.Size(320, 42);
             this.btnStatus.TabIndex = 2;
-            this.btnStatus.Text = "Service Request Status\r\n(Coming Soon)";
+            this.btnStatus.Text = "Service Request Status (Coming Soon)";
             this.btnStatus.UseVisualStyleBackColor = true;
             // 
             // MainMenuForm
@@ -79,16 +79,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnStatus);
             this.Controls.Add(this.btnEvents);
             this.Controls.Add(this.btnReportIssues);
             this.Name = "MainMenuForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Municipal Services Dashboard";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -38,13 +38,11 @@ namespace MunicipalServicesApp
             int totalButtonWidth = (buttonWidth * 3) + (buttonSpacing * 2);
             int centerX = (this.ClientSize.Width - totalButtonWidth) / 2;
 
-            // Adjust input fields width
             txtLocation.Width = contentWidth;
             cmbCategory.Width = contentWidth;
             rtbDescription.Width = contentWidth;
             pbReportingProgress.Width = contentWidth;
 
-            // Position buttons at the bottom center
             int bottomMargin = 20;
             int buttonsTopPosition = this.ClientSize.Height - buttonHeight - bottomMargin;
 
@@ -63,7 +61,6 @@ namespace MunicipalServicesApp
             btnBackToMenu.Width = buttonWidth;
             btnBackToMenu.Height = buttonHeight;
 
-            // Adjust rich text box height to make room for buttons
             rtbDescription.Height = Math.Max(100, buttonsTopPosition - rtbDescription.Top - 20);
         }
 
@@ -76,12 +73,6 @@ namespace MunicipalServicesApp
 
         private void AttachProgressTrackers()
         {
-            // Attach event handlers to track form completion
-            // lblEngagementMessage is triggered whenever these events fire:
-            // - User types in address field
-            // - User selects a category
-            // - User types in description field
-            // It updates based on form completion score (0, 25, 50, 75, 100%)
             txtLocation.TextChanged += (s, e) => UpdateProgress();
             cmbCategory.SelectedIndexChanged += (s, e) => UpdateProgress();
             rtbDescription.TextChanged += (s, e) => UpdateProgress();
@@ -149,7 +140,6 @@ namespace MunicipalServicesApp
         }
     }
 
-    // Helper data structures moved to the bottom so the designer works perfectly
     public class IssueReport
     {
         public string Location { get; set; }

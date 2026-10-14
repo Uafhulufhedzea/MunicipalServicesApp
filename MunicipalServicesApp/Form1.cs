@@ -21,22 +21,30 @@ namespace MunicipalServicesApp
 
         private void CenterControls()
         {
-            // Center title horizontally
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
             lblTitle.Top = 40;
 
-            // Center buttons in the middle of the form
-            int centerX = (this.ClientSize.Width - btnReportIssues.Width) / 2;
-            int centerY = (this.ClientSize.Height - 180) / 2; // 180 = 3 buttons * 45 + spacing
+            int buttonWidth = Math.Min(320, Math.Max(220, this.ClientSize.Width - 80));
+            int buttonHeight = 42;
+            int buttonSpacing = 16;
+            int totalButtonHeight = (buttonHeight * 3) + (buttonSpacing * 2);
+            int centerX = (this.ClientSize.Width - buttonWidth) / 2;
+            int centerY = Math.Max(110, (this.ClientSize.Height - totalButtonHeight) / 2);
 
+            btnReportIssues.Width = buttonWidth;
+            btnReportIssues.Height = buttonHeight;
             btnReportIssues.Left = centerX;
             btnReportIssues.Top = centerY;
 
+            btnEvents.Width = buttonWidth;
+            btnEvents.Height = buttonHeight;
             btnEvents.Left = centerX;
-            btnEvents.Top = centerY + 60;
+            btnEvents.Top = centerY + buttonHeight + buttonSpacing;
 
+            btnStatus.Width = buttonWidth;
+            btnStatus.Height = buttonHeight;
             btnStatus.Left = centerX;
-            btnStatus.Top = centerY + 120;
+            btnStatus.Top = centerY + (buttonHeight + buttonSpacing) * 2;
         }
 
         private void MainMenuForm_Resize(object sender, EventArgs e)
@@ -50,5 +58,19 @@ namespace MunicipalServicesApp
             reportForm.ShowDialog();
         }
 
+        private void btnEvents_Click(object sender, EventArgs e)
+        {
+         
+            LocalEventsForm eventsPage = new LocalEventsForm();
+
+     
+            eventsPage.FormClosed += (s, args) => this.Close();
+
+        
+            eventsPage.Show();
+
+           
+            this.Hide();
+        }
     }
 }
