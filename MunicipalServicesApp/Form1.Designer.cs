@@ -28,21 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
             this.btnReportIssues = new System.Windows.Forms.Button();
             this.btnEvents = new System.Windows.Forms.Button();
             this.btnStatus = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(240, 40);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(320, 29);
-            this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Municipal Services Portal";
             // 
             // btnReportIssues
             // 
@@ -91,7 +80,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnReportIssues;
         private System.Windows.Forms.Button btnEvents;
         private System.Windows.Forms.Button btnStatus;
